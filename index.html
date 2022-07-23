@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula 01 Vuejs do jeito ninja</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>{{ titulo }}</h1>
+            <label for="">nome</label><br>
+            <input type="text" v-model="nome">
+            
+
+            <br><b> 
+            <label for="">Telefone</label><br>
+            <input type="Text" v-model="Telefone">
+
+            <br><b>
+            <label for="">Deseja receber nossas novidades?</label><br>
+            <input type="radio" value="Sim" v-model="interesse"="novidades"> sim
+            <input type="radio" value="Não" v-model="interesse"="novidades"> não
+
+            <br><br>
+            <label for="">interesses</label><br>
+            <input type="Cheackbox" value="Futebol" V-model="interesses"> Futebol<br> 
+            <input type="checkbox" value="Formula" v-model="interesses"> Formula 1<br> 
+            <input type="checkbox" value="corrido" v-model="interesse"> corrida<br> 
+
+            <br><br>
+            <label for="">Como nos conheceu?</label><br> 
+                <select v-model="Conheceu">
+                    <option valeu="">Escolha</option>
+                    <option valeu="Google">Google</option>
+                    <option value="TV">TV</option>
+                    <option value="Revist">Revista</option>
+                </select> 
+
+                <br><br>
+
+                <button>ENVIAR</button>
+
+            <hr> 
+
+            Nome: {{ nome }} <br> 
+            Telefone: {{ Telefone }}<br> 
+            novidades: {{ novidades }}<br> 
+            interesse: {{ interesse }}<br> 
+            como nos conheceu: {{ conheceu }}<br>
+
+        </div>
+        
+        <script src="https://unpkg.com/vue"></script>
+
+
+        <script>
+            var app = new Vue({
+                el: "#app",
+                data: {
+                titulo: "Aula 01 - VueJs do jeito ninja",
+                nome: "",
+                Telefone: "",
+                novidades: "",
+                interesses: [],
+                conheceu: ""
+                
+                }
+            });
+        </script>
+    </body>
+</html> 
